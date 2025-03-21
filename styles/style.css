@@ -41,7 +41,7 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
+
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -65,6 +65,7 @@ ol {
   max-width: 1200px;
   padding: 133px 30px;
 }
+
 .title {
   font-family: Oswald, sans-serif;
   font-size: 75px;
@@ -85,7 +86,7 @@ ol {
   line-height: 16.2px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1; /* Ограничиваем текст в 1 строку */
+  -webkit-line-clamp: 1; 
   overflow: hidden;
   text-overflow: ellipsis;
   gap: 6px;
@@ -107,8 +108,7 @@ ol {
 }
 
 .search-form__checkbox {
-  appearance: none; /* Убираем дефолтный чекбокс */
-  position: absolute; /* Чекбокс не виден, но остаётся интерактивным */
+  appearance: none; 
   width: 0;
   height: 0;
   opacity: 0;
@@ -118,25 +118,25 @@ ol {
   display: inline-flex;
   width: 18px;
   height: 18px;
-  border: 1px solid #fff; /* Граница чекбокса */
-  position: relative; /* Для центрирования внутреннего квадрата */
+  border: 1px solid #fff; 
+  position: relative; 
   justify-content: center;
   align-items: center;
-  cursor: pointer; /* Указываем, что элемент кликабельный */
+  cursor: pointer; 
 }
 
 .search-form__pseudo-checkbox::after {
   content: "";
-  width: 16px; /* На 1px меньше чекбокса */
+  width: 16px; 
   height: 16px;
-  background-color: #fff; /* Белый квадрат внутри */
-  display: none; /* По умолчанию скрыт */
+  background-color: #fff; 
+  display: none; 
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after,
 .search-form__checkbox:active + .search-form__pseudo-checkbox::after {
-  display: block; /* Показываем белый квадрат */
-  background-color: #fff; /* Белый фон */
+  display: block; 
+  background-color: #fff; 
 }
 
 .search-form__label:has(.search-form__checkbox:focus-visible) {
@@ -188,7 +188,6 @@ ol {
   padding-right: 3px;
 }
 
-/* Делаем .search-form флекс-контейнером */
 .search-form {
   display: flex;
   gap: 40px;
@@ -197,15 +196,14 @@ ol {
   width: auto;
 }
 
-/* Распределяем элементы .search-form пропорционально */
 .search-form__fieldset {
   display: flex;
   border: none;
   flex-direction: column;
   flex-grow: 1;
   gap: 5px;
-  width: auto; /* Убираем фиксированную ширину */
-  min-width: max-content; /* Делаем ширину равной содержимому */
+  width: auto; 
+  min-width: max-content; 
 }
 
 .search-form__textfield {
@@ -223,11 +221,11 @@ ol {
 }
 
 .search-form__textfield:focus {
-  outline: none; /* Убираем стандартный фокус */
+  outline: none; 
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  border: 1px solid #fff; /* Добавляем границу вокруг label */ /* Немного увеличиваем отступ */
+  border: 1px solid #fff; 
 }
 
 .search-form__label {
@@ -260,12 +258,12 @@ ol {
 .search-form__submit-button {
   padding-left: 73.5px;
   padding-right: 73.5px;
-  align-self: flex-end; /* Размещаем в конце контейнера */
-  flex-shrink: 0; /* Запрещаем кнопке растягиваться */
+  align-self: flex-end; 
+  flex-shrink: 0; 
 }
 
 .more-button {
-  width: 100%; /* Кнопка занимает всю ширину контейнера */
+  width: 100%; 
   padding-left: 142px;
   padding-right: 142px;
   margin-top: 30px;
@@ -273,18 +271,15 @@ ol {
   margin-bottom: 2px;
 }
 
-/* При наведении (hover) текст подчёркивается */
 .button:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
-/* При нажатии (active) кнопка становится серой */
 .button:active {
   background-color: #545050;
 }
 
-/* В фокусе (focus-visible) появляется обводка */
 .button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: -3px;
@@ -300,7 +295,7 @@ ol {
 .content__list-container {
   flex-grow: 1;
   overflow-y: auto;
-  max-height: 298px; /* Настроить под макет */
+  max-height: 298px; 
   padding: 0 2px 2px 2px;
   position: relative;
 }
@@ -312,7 +307,6 @@ ol {
   position: relative;
 }
 
-/* Видео занимает всю ширину и высоту контейнера */
 .result__video {
   width: 100%;
   height: 100%;
@@ -320,7 +314,6 @@ ol {
   object-position: center;
 }
 
-/* Отступы между карточками */
 .content__list {
   display: flex;
   flex-direction: column;
@@ -328,7 +321,6 @@ ol {
   align-items: stretch;
 }
 
-/* Карточки располагаются в строку */
 .content__video-card {
   display: flex;
   align-items: flex-start;
@@ -336,7 +328,6 @@ ol {
   height: 103px;
 }
 
-/* Миниатюра занимает фиксированные размеры */
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
@@ -344,7 +335,6 @@ ol {
   object-position: center;
 }
 
-/* Описание растягивается на всю доступную ширину */
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
