@@ -10,7 +10,7 @@ html {
 
 .page {
   inline-size: 1200px;
-  block-size: 100%;
+  /*block-size: 100%;*/
   margin: auto;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -19,7 +19,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 133px 30px;
 }
 
 h1,
@@ -59,11 +60,9 @@ ol {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: auto;
   grid-template-areas: "result details";
-  align-items: end;
   gap: 30px;
-  width: 100%;
+  inline-size: 100%;
   max-width: 1200px;
-  padding: 133px 30px;
 }
 
 .title {
@@ -186,8 +185,8 @@ ol {
   display: flex;
   gap: 40px;
   justify-content: space-between;
-  align-items: flex-start;
   width: auto;
+  height: 54px;
 }
 
 .search-form__fieldset {
@@ -237,7 +236,6 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-self: flex-end;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
