@@ -60,7 +60,7 @@ ol {
   grid-template-rows: auto;
   grid-template-areas: "result details";
   align-items: end;
-  gap: 10px;
+  gap: 30px;
   width: 100%;
   max-width: 1200px;
   padding: 133px 30px;
@@ -109,15 +109,12 @@ ol {
 
 .search-form__checkbox {
   appearance: none; 
-  width: 0;
-  height: 0;
-  opacity: 0;
 }
 
 .search-form__pseudo-checkbox {
   display: inline-flex;
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
   border: 1px solid #fff; 
   position: relative; 
   justify-content: center;
@@ -127,8 +124,8 @@ ol {
 
 .search-form__pseudo-checkbox::after {
   content: "";
-  width: 16px; 
-  height: 16px;
+  width: 15px; 
+  height: 15px;
   background-color: #fff; 
   display: none; 
 }
@@ -148,6 +145,7 @@ ol {
   text-decoration: none;
   color: #ffffff;
   display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .content__video-card-title {
@@ -176,11 +174,7 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
-}
-
-.content__list-item:not(:last-child) {
-  margin-bottom: 30px;
+  /*padding: 20px;*/
 }
 
 .content__list-item {
@@ -214,7 +208,6 @@ ol {
   font-size: inherit;
   font-weight: 400;
   background-color: inherit;
-  appearance: none;
   border: none;
   border-top: 1px solid currentColor;
   border-bottom: 1px solid currentColor;
@@ -288,7 +281,6 @@ ol {
 .search-form__fieldset-title {
   font-size: inherit;
   font-weight: 400;
-  text-transform: uppercase;
   color: white;
 }
 
@@ -324,8 +316,6 @@ ol {
 .content__video-card {
   display: flex;
   align-items: flex-start;
-  width: 394px;
-  height: 103px;
 }
 
 .content__video-card-thumbnail {
@@ -360,14 +350,10 @@ ol {
   text-decoration: underline;
 }
 
-.content_video:active {
-  background-color: transparent;
-}
-
-.content__card-link {
-  transition: background-color 0.3s ease, color 0.3s ease;
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .preloader {
-  z-index: 10; /* Убедитесь, что прелоадер поверх всего */
+  z-index: 10; 
 }
