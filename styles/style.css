@@ -186,7 +186,6 @@ ol {
   gap: 40px;
   justify-content: space-between;
   width: auto;
-  height: 54px;
 }
 
 .search-form__fieldset {
@@ -217,7 +216,8 @@ ol {
 }
 
 .search-form__label:has(.search-form__textfield:focus-visible) {
-  border: 1px solid #fff; 
+  outline: 1px solid #fff;
+  outline-offset: 2px;
 }
 
 .search-form__label {
@@ -251,6 +251,7 @@ ol {
   padding-right: 73.5px;
   align-self: flex-end; 
   flex-shrink: 0; 
+  margin-top: 18.8px;
 }
 
 .more-button {
